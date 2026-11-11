@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Boxes,
@@ -157,14 +157,22 @@ function Index() {
         <div className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-teal/20 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid gap-12 border-b border-footer-foreground/15 pb-16 lg:grid-cols-[1.2fr_0.8fr]">
-            <div><p className="section-label text-teal-light">Start a conversation</p><h2 className="max-w-2xl bg-logo-gradient bg-clip-text font-heading text-4xl font-bold text-transparent sm:text-5xl">Have an idea worth building?</h2><a href="mailto:voodootechsystems@gmail.com" className="mt-8 inline-flex items-center gap-3 text-lg font-semibold text-teal-light transition-colors hover:text-footer-foreground hover:text-cyan"><Mail className="size-5" />voodootechsystems@gmail.com</a></div>
+            <div><p className="section-label text-teal-light">Start a conversation</p><h2 className="max-w-2xl bg-logo-gradient bg-clip-text font-heading text-4xl font-bold text-transparent sm:text-5xl">Have an idea worth building?</h2><a href="mailto:contact@voodootechsystems.in" className="mt-8 inline-flex items-center gap-3 text-lg font-semibold text-teal-light transition-colors hover:text-footer-foreground hover:text-cyan"><Mail className="size-5" />contact@voodootechsystems.in</a></div>
             <div className="space-y-5 lg:pt-10">
               <a href="tel:+919870444150" className="flex items-center gap-4 border-b border-footer-foreground/15 pb-5 transition-colors hover:text-cyan"><Phone className="size-5" /><span>+91 98704 44150</span></a>
               <a href="tel:+919891234473" className="flex items-center gap-4 border-b border-footer-foreground/15 pb-5 transition-colors hover:text-cyan"><Phone className="size-5" /><span>+91 98912 34473</span></a>
               <div className="flex items-start gap-4"><MapPin className="mt-1 size-5 shrink-0 text-teal-light" /><span>Dwarka - 8, New Delhi 110077</span></div>
             </div>
           </div>
-          <div className="flex flex-col gap-4 pt-8 text-xs text-footer-muted sm:flex-row sm:items-center sm:justify-between"><span>© 2026 VoodooTech Systems LLP. All rights reserved.</span><span>Ideas <span className="text-teal-light">∞</span> Technology <span className="text-cyan">∞</span> Impact</span></div>
+          <div className="flex flex-col gap-4 pt-8 text-xs text-footer-muted sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-4">
+              <span>© 2026 VoodooTech Systems LLP. All rights reserved.</span>
+              <Link to="/privacy" className="text-teal-light hover:underline transition-colors">
+                Privacy Policy
+              </Link>
+            </div>
+            <span>Ideas <span className="text-teal-light">∞</span> Technology <span className="text-cyan">∞</span> Impact</span>
+          </div>
         </div>
       </footer>
     </main>
